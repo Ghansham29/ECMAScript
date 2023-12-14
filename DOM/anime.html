@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: white;
+            font-size:400px;
+        }
+    </style>
+</head>
+<body>
+    <marquee bgcolor="red" id="body"><h1 id="counter">10</h1></marquee>
+    <script>
+        var initialcounterelements=document.getElementById("counter")
+        var initialvalue=initialcounterelements.innerHTML;
+        var bodyselect=document.getElementById("body")
+        
+        setInterval(function(){
+            initialvalue=initialvalue>0?initialvalue-=1:0;
+            initialcounterelements.innerHTML=initialvalue;
+            var color=initialvalue%2===0?"tomato":"Blue"
+
+            bodyselect.bgColor=color;
+
+        },1000)
+    </script>
+    
+</body>
+</html>
+
+
+//createElement
+//createTopNode
+
+//Method insertBefore()
+//Add the new elements before the motioned elements.
